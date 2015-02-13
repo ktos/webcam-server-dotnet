@@ -1,0 +1,30 @@
+﻿<Window x:Class="CamServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="290" Width="474" Closing="Window_Closing" Icon="/CamServer;component/webcamreceive.ico">
+    <Grid>
+        <Button Content="Start streaming" Height="23" HorizontalAlignment="Right" Margin="0,11,12,0" Name="startBtn" VerticalAlignment="Top" Width="97" Click="startBtn_Click" />
+        <ComboBox Height="23" Margin="12,12,115,0" Name="captureDevicesLst" VerticalAlignment="Top" Loaded="captureDevicesLst_Loaded" />
+        <ScrollViewer Margin="12,90,12,12" Name="logScroll">
+            <TextBlock Name="logBox" Text="" />
+        </ScrollViewer>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,41,0,0" Name="testBlock" Text="http://localhost:8080/" VerticalAlignment="Top" Cursor="Hand" Foreground="Blue" MouseLeftButtonUp="textBlock1_MouseLeftButtonUp" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,38,12,0" Name="modeChooser" SelectionChanged="modeChooser_SelectionChanged" VerticalAlignment="Top" Width="126">
+            <ComboBoxItem Content="Real cam" IsSelected="True" />
+            <ComboBoxItem Content="Simulated cam pics" />
+        </ComboBox>
+        <Grid Height="23" HorizontalAlignment="Right" Margin="0,38,144,0" Name="grid1" VerticalAlignment="Top" Width="71">
+            <TextBox Height="23" HorizontalAlignment="Left" Name="fpsBox" VerticalAlignment="Top" TextAlignment="Right" Text="1" Width="30" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="36,2,0,0" Text="fps" VerticalAlignment="Top" />
+        </Grid>
+        <CheckBox Content="Do resize" Height="16" HorizontalAlignment="Left" Margin="12,68,0,0" Name="doResizeCheck" VerticalAlignment="Top" IsChecked="True" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="92,68,0,0" Name="textBlock2" Text="Width:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="130,65,0,0" Name="textBox1" VerticalAlignment="Top" Width="45" Text="1280" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="178,68,0,0" Name="textBlock3" Text="px," VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="198,68,0,0" Name="textBlock4" Text="Height:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="236,65,0,0" Name="textBox2" VerticalAlignment="Top" Width="45" Text="1024" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="284,68,0,0" Name="textBlock5" Text="px" VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,68,54,0" Name="textBlock6" Text="Port:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="404,65,0,0" Name="portBox" VerticalAlignment="Top" Width="36" Text="8080" />
+    </Grid>
+</Window>
